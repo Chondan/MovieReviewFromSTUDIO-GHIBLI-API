@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 1px 5px;
+}
+div#root {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100%;
+    padding: 0;
+}
+div.left-bar {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    position: sticky;
+    top: 7px;
+}
+div.left-bar a {
+    width: 95%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+div.left-bar img {
+    /* border: 1px solid black; */
+    height: auto;
+    width: 95%;
+}
+div.left-bar div.movie-list-container {
+    /* border: 1px solid black; */
+    height: 490px;
+    width: 95%;
+    margin: 5px auto;
+    overflow: auto;
+}
+div.movie-list-container ul {
+    list-style: none;
+    /* border: 1px solid black; */
+    width: 100%;
+    margin: 5px auto;
+    padding-left: 0;
+}
+div.movie-list-container li {
+    border: 1px solid #ddd;
+    width: 95%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+div.movie-list-container li p:first-child {
+    font-weight: bold;
+}
+div.movie-list-container li:hover {
+    box-shadow: 3px 3px 2px rgb(230, 104, 104);
+}
+div.right-bar {
+    width: 74%;
+    /* border: 1px solid black; */
+}
+div.movie-detail-container {
+    /* border: 1px solid black; */
+    height: 100%;
+    padding-top: 10px;
+}
+div.movie-detail-container p:not(#movie-description) {
+    display: inline-block;
+    margin-right: 10px;
+}
+p#movie-description {
+    text-indent: 20px;
+}
+
+/* ----- SET SELECTED LIST -----*/
+li.selected-list {
+    background-color: rgba(230, 104, 104, 0.856) !important;
+}
+li.selected-list:hover {
+    box-shadow: 3px 3px 2px rgb(196, 187, 187) !important;
+}
+
+/* ----- SCROLL BAR CUSTOMIZE ----- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+@media screen and (max-width: 600px) {
+    div#root {
+        flex-direction: column;
+    }
+    div.left-bar {
+        width: 100%;
+        height: fit-content;
+        margin-left: 0;
+        margin-right: 0;
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+    div.left-bar img {
+        height: 75px;
+        width: auto;
+    }
+    div.right-bar {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    div.left-bar div.movie-list-container {
+        height: fit-content;
+        overflow-x: auto;
+    }
+    div.movie-list-container ul {
+        width: max-content;
+    }
+    div.movie-list-container li {
+        display: inline-block;
+        width: auto;
+        height: 120px;
+        margin-right: 2px;
+    }
+    div.movie-detail-container {
+        /* border: 1px solid black; */
+        padding: 5px;
+        height: 100%;
+    }
+    div#movie-description-container {
+        /* border: 1px solid rgb(129, 14, 14); */
+        margin-top: 10px;
+        height: 100%;
+        
+    }
+    div#movie-description-container {
+        width: 100%;
+    }
+    div.movie-detail-container p:not(#movie-description) {
+        display: block;
+    }
+}
