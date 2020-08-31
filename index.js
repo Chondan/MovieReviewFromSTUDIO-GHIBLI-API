@@ -43,7 +43,7 @@ function showMovieDetail(obj, list) {
     movieDetailContainer.innerHTML = "";
     const movieTitle = createMovieDetailElement("h1","movie-title", null, null, title);
     const movieDescription = createMovieDetailElement("p", "movie-description", null, null, description);
-    const movieDirector = createMovieDetailElement("p", "movie-director", "strong", "Director: ", producer);
+    const movieDirector = createMovieDetailElement("p", "movie-director", "strong", "Director: ", director);
     const movieProducer = createMovieDetailElement("p", "movie-producer", "strong", "Producer: ", producer);
     const movieScore = createMovieDetailElement("p", "movie-score", "strong", "Score: ", rt_score_star);
     const movieDescription2 = createMovieDetailElement("p", "movie-description", null, null, description);
