@@ -55,8 +55,6 @@ function showMovieDetail(obj, list) {
     movieDetailContainer.append(movieTitle, movieDirector, movieProducer, movieScore, movieDescriptionContainer);  
     }
     
-    
-
 function App() {
     makeRequest("https://ghibliapi.herokuapp.com/films", (movieObj) => {
         movieObj.forEach(movie => {
